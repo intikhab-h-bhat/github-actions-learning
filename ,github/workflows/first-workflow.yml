@@ -1,0 +1,14 @@
+name: "Hello GitHub Actions"
+description: "Learning Github actions From scratch"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Hello:
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: "Say Hello"
+      run: echo "Hellow welcome to github actions"
+  
