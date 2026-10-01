@@ -1,8 +1,8 @@
-name: Hello GitHub Actions
+name: Workflow Information
 
 on:
   workflow_dispatch:
-  
+
 jobs:
   print:
     runs-on: ubuntu-latest
@@ -10,11 +10,9 @@ jobs:
     steps:
       - name: Trigger Information
         run: echo "The workflow is triggered by event: ${{ github.event_name }}"
-  
-   
-      - name: jobs information
-        run: echo "The workflow contain at least one job"
-    
-  
+
+      - name: Jobs Information
+        run: echo "The workflow contains at least one job"
+
       - name: Summary
         run: echo "This workflow has completed its steps."
