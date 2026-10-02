@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: "push trigger"
-      run: |
-        echo "Push workflow triggered ${{github.event_name}}"
+      - name: "push trigger"
+        run: |
+          echo "Push workflow triggered ${{github.event_name}}"
 
-    - name: "show branch"
-      run: |
-        echo "Branch: ${{github.ref}}"
-    - name: "show commit"
-      run: |
-        echo "Commit: ${{github.sha}}"
+      - name: "show branch"
+        run: |
+          echo "Branch: ${{github.ref}}"
+      - name: "show commit"
+        run: |
+          echo "Commit: ${{github.sha}}"
