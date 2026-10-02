@@ -3,7 +3,7 @@ name: Push Workflow
 
 on:
   push:
-    branches: main
+    
 
 jobs:
   pushjob:
@@ -13,5 +13,10 @@ jobs:
     - name: "push trigger"
       run: |
         echo "Push workflow triggered ${{github.event_name}}"
+
+    - name: "show branch"
+      run: |
         echo "Branch: ${{github.ref}}"
+    - name: "show commit"
+      run: |
         echo "Commit: ${{github.sha}}"
