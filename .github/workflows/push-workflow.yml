@@ -1,0 +1,17 @@
+
+name: Push Workflow
+
+on:
+  push:
+    branches: main
+
+jobs:
+  pushjob:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "push trigger"
+      run: |
+        echo "Push workflow triggered ${{github.event_name}}"
+        echo "Branch: ${{github.ref}}"
+        echo "Commit: ${{github.sha}}"
