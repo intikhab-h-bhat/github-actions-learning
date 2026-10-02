@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Trigger Information
-        run: echo "The workflow is triggered by event"
+        run: echo "The workflow is triggered by event: ${{ github.event_name }}"
 
       - name: Jobs Information
         run: echo "The workflow contains at least one job"
