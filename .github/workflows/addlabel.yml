@@ -1,0 +1,17 @@
+name: Add Label
+
+on: 
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  add-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add label
+        uses: pullreminders/label-when-approved@v1
+        env:
+          Approvals: '1'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: 'approved'
