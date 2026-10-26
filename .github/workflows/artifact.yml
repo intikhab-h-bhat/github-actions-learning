@@ -1,0 +1,23 @@
+name: Use Artifacts
+
+on: [workflow_dispatch]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the project
+        run: echo "Building the project..."
+        uses: actions/checkout@v2
+
+      - name: npm install and build webpack
+        run: |
+          npm install
+          npm run build
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: public
